@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<i>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background-image: url(1.jpg);
+			font-family: sans-serif;
+			background-size: cover;
+		}
+		h1{
+			color: white;
+			font-size: 50px;
+			text-align: center;
+			border-radius: 5px;
+			width: 250px;
+			margin: 0 auto;
+			padding: 5px 15px;
+			background: black;		
+		}
+		ul{
+			display: flex;
+			position: absolute;
+			left: 25%;
+			top: 50%;
+			transform: translateX(-50px);
+			list-style: none;
+		}
+
+		
+		ul li{
+			margin:0 8px;
+		}
+		ul li img{
+			width: 100px;
+			height: 100px;
+			border: 4px solid balck;
+			transition: transform 1s;
+			cursor: pointer;
+		}
+		.next{
+         text-align: rtl;
+         margin: px;
+	}
+	</style>
+</head>
+<body>
+   <h1 id="imagetitle">JUPEE IMAGES</h1>
+   <ul>
+   	<li><img src="A.JPG" title="IMG.A" onclick="myGallery(this)"></li>
+    <li><img src="B.JPG" title="IMG.B" onclick="myGallery(this)"></li>
+   	<li><img src="C.JPG" title="IMG.C" onclick="myGallery(this)"></li>
+   	<li><img src="D.JPG" title="IMG.D" onclick="myGallery(this)"></li>
+   	<li><img src="E.JPG" title="IMG.E" onclick="myGallery(this)"></li>
+   	<li><img src="F.JPG" title="IMG.F" onclick="myGallery(this)"></li>
+   	<li><img src="G.JPG" title="IMG.G" onclick="myGallery(this)"></li>
+   	<li><img src="H.JPG" title="IMG.H" onclick="myGallery(this)"></li>
+   </ul>
+<script>
+function myGallery(imgpath){
+    let currentImg=imgpath.src;
+    console.log(currentImg);
+    let currentTitle=imgpath.title;
+    console.log(currentTitle);
+
+    document.getElementById('imagetitle').innerText=currentTitle;
+    document.body.style.backgroundImage=`url("${currentImg}")`;
+} 
+</script>
+
+</body>
+<a href="home page.html">previous</a><br><br><br>
+<div class="next">
+<a href="about us.html">next</a>
+</div>
+</i>
+</html>
+
+		

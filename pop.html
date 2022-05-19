@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<font color="green">
+<h1 align="center">Displaying User Input</h1>
+</font>
+<script>
+function getMyArray() {
+var userInput=window.prompt();
+document.write("User input is =>"+userInput);
+}
+getMyArray();
+function multiplyBy()
+{
+        num1 = document.getElementById("firstValue").value;
+        num2 = document.getElementById("secondValue").value;
+        document.getElementById("result").innerHTML = num1 * num2;
+}
+</script>
+<form>
+1st value : <input type="text" id="firstValue"/><br><br>
+2nd value : <input type="text" id="secondValue"/><br><br>
+<input type="button" onClick="multiplyBy()" Value="product"/>
+</form>
+
+<p>The Result is : <br>
+<span id = "result"></span>
+</p>
+</body>
+</html>
